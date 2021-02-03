@@ -1,0 +1,27 @@
+version: '1.0'
+stages:
+ - prepare
+ - build
+ - test
+steps:
+  main_clone:
+    title: Cloning main repository...
+    stage: prepare
+    type: git-clone
+    repo: 'sayalimohdikar1992/codefresh-trial2'
+    revision: master
+    git: github
+  build_my_image:
+    title: Building Docker Image
+    stage: build
+    type: build
+    image_name: codefresh2
+    tag: master
+    dockerfile: Dockerfile
+    registry: ecr
+  test_my_image:
+     title: Running unit tests
+     stage: test
+     image: '${{build_my_image}}'
+     commands:
+       - python -m unittest summation.py     
