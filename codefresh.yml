@@ -3,6 +3,7 @@ stages:
  - prepare
  - build
  - test
+ - deploy
 steps:
   main_clone:
     title: Cloning main repository...
@@ -30,6 +31,6 @@ steps:
     type: deploy
     stage: deploy
     kind: kubernetes
-    cluster:  codefresh2
+    cluster:  test
     namespace: test
     service: codefresh2
