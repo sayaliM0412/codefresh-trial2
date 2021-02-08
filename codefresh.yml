@@ -36,4 +36,4 @@ steps:
     service: codefresh-trial-2
     candidate:
       image: 482780835707.dkr.ecr.us-west-2.amazonaws.com/codefresh2:master
-      registry: codefresh2
+      registry: codefresh
