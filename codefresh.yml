@@ -33,4 +33,4 @@ steps:
     kind: kubernetes
     cluster:  test
     namespace: test
-    service: codefresh2
+    service: codefresh-trial
