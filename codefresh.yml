@@ -32,5 +32,5 @@ steps:
     stage: deploy
     kind: kubernetes
     cluster:  test
-    namespace: test
+    namespace: codefresh2
     service: codefresh-trial
