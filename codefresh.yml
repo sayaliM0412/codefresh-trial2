@@ -33,7 +33,7 @@ steps:
     kind: kubernetes
     cluster:  test
     namespace: codefresh2
-    service: codefresh-trial
+    service: codefresh-trial-2
     candidate:
       image: 482780835707.dkr.ecr.us-west-2.amazonaws.com/codefresh2:master
       registry: codefresh
