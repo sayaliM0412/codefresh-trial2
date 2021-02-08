@@ -25,3 +25,11 @@ steps:
      image: '${{build_my_image}}'
      commands:
        - python -m unittest summation.py     
+  DeployToMyCluster:
+    title: deploying to cluster
+    type: deploy
+    stage: deploy
+    kind: kubernetes
+    cluster:  codefresh2
+    namespace: test
+    service: codefresh2
