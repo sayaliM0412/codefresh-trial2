@@ -44,7 +44,7 @@ steps:
     type: deploy
     stage: deployuat
     kind: kubernetes
-    cluster:  test
+    cluster:  uat
     namespace: codefresh-1
     service: python-code-codefresh
     env:
