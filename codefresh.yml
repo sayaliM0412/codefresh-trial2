@@ -4,6 +4,7 @@ stages:
  - build
  - test
  - deploy
+ - deployuat
 steps:
   main_clone:
     title: Cloning main repository...
@@ -38,3 +39,15 @@ steps:
       name: test
       type: kubernetes
       change: Updated
+  DeployToUATCluster:
+    title: deploying to uat cluster
+    type: deploy
+    stage: deployuat
+    kind: kubernetes
+    cluster:  test
+    namespace: codefresh-1
+    service: python-code-codefresh
+    env:
+      name: uat
+      type: kubernetes
+      change: Updated 
