@@ -35,6 +35,6 @@ steps:
     namespace: codefresh2
     service: python-code-codefresh
     env:
-      name: uat
+      name: test
       type: kubernetes
       change: Updated
