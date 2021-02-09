@@ -26,11 +26,27 @@ steps:
      image: '${{build_my_image}}'
      commands:
        - python -m unittest summation.py     
-  DeployToMyCluster:
-    title: deploying to cluster
+  DeployToTestCluster:
+    title: deploying to test cluster
     type: deploy
     stage: deploy
     kind: kubernetes
     cluster:  test
     namespace: codefresh2
     service: python-code-codefresh
+    env:
+      name: test
+      type: kubernetes
+      change: Updated
+  # DeployToUATCluster:
+  #   title: deploying to uat cluster
+  #   type: deploy
+  #   stage: deploy
+  #   kind: kubernetes
+  #   cluster:  uat
+  #   namespace: codefresh-1
+  #   service: python-code-codefresh
+  #   env:
+  #     name: uat
+  #     type: kubernetes
+  #     change: Updated
